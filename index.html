@@ -24,18 +24,90 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
         h2 {
             color: #3498db;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+        }
+        .contact-form {
+            display: grid;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
     <h1>Welcome!</h1>
     <p>This is a simple webpage to demonstrate GitHub workflows.</p>
+    
     <div class="content">
         <h2>About</h2>
         <p>This page was created as part of a GitHub workflow demonstration.</p>
     </div>
+
+    <div class="content">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>Responsive Design</h3>
+                <p>Works great on all devices</p>
+            </div>
+            <div class="feature-item">
+                <h3>Modern Layout</h3>
+                <p>Clean and professional appearance</p>
+            </div>
+            <div class="feature-item">
+                <h3>Easy to Use</h3>
+                <p>Simple and intuitive interface</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Features</a>
+        <a href="#">Contact</a>
+        <p>&copy; 2024 Simple Page. All rights reserved.</p>
+    </footer>
 </body>
 </html>
